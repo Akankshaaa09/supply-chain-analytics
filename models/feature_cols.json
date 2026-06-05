@@ -1,0 +1,1 @@
+["num_items", "total_price", "total_freight", "avg_product_weight", "avg_product_volume", "num_sellers", "payment_installments", "payment_value", "purchase_hour", "purchase_dayofweek", "purchase_month", "purchase_quarter", "approval_delay_hours", "carrier_delay_hours", "estimated_delivery_window", "same_state", "payment_type_encoded", "customer_state_encoded"]
