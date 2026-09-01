@@ -8,9 +8,9 @@ Post-2020 supply chain disruptions exposed a critical gap in enterprise analytic
 
 ## Architecture
 
-**Raw Data (Kaggle/Olist) → Azure Blob Storage → Python ETL → **
+Raw Data (Kaggle/Olist) → Azure Blob Storage → Python ETL →
 
-**XGBoost Model → Processed Data → Azure Blob Storage → Power BI Dashboard**
+XGBoost Model → Processed Data → Azure Blob Storage → Power BI Dashboard
 
 ## Tech Stack
 
@@ -37,35 +37,34 @@ Post-2020 supply chain disruptions exposed a critical gap in enterprise analytic
 - Orders placed in March have the highest late rate (\~15%)
 
 
+## ML Model Performance
 
-*## ML Model Performance*
+- Algorithm: XGBoost Classifier
 
-*- \*\*Algorithm:\*\* XGBoost Classifier*
+- AUC-ROC: 0.84
 
-*- \*\*AUC-ROC:\*\* 0.84*
+- Late order recall: 71%
 
-*- \*\*Late order recall:\*\* 71%*
+- Class imbalance handled via: scale_pos_weight (13.76)
 
-*- \*\*Class imbalance handled via:\*\* scale\_pos\_weight (13.76)*
-
-*- \*\*Top features:\*\* purchase\_month, same\_state, carrier\_delay\_hours*
+- Top features: purchase_month, same_state, carrier_delay_hours
 
 
 ## Project Structure
 
-*supply-chain-analytics/*
+supply-chain-analytics/
 
-*├── notebooks/          # Jupyter notebooks - EDA, features, modeling*
+├── notebooks/          # Jupyter notebooks - EDA, features, modeling
 
-*├── scripts/            # Azure ingestion scripts*
+├── scripts/            # Azure ingestion scripts
 
-*├── models/             # Saved XGBoost model + encoders*
+├── models/             # Saved XGBoost model + encoders
 
-*├── dashboard/          # Power BI file + screenshots*
+├── dashboard/          # Power BI file + screenshots
 
-*├── processed\_data/     # Transformed datasets*
+├── processed_data/     # Transformed datasets
 
-*└── raw\_data/           # Original Olist CSVs (gitignored)*
+└── raw_data/           # Original Olist CSVs (gitignored)
 
 ## How to Run
 
