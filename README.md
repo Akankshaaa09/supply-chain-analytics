@@ -1,36 +1,18 @@
-*# Supply Chain Performance \& Delay Analytics Pipeline*
+# Supply Chain Performance \& Delay Analytics Pipeline
 
+An end-to-end supply chain analytics pipeline built on Azure, featuring delivery delay prediction, supplier performance analysis, and an interactive Power BI dashboard.
 
+## Project Overview
 
-*An end-to-end supply chain analytics pipeline built on Azure, featuring* 
+Post-2020 supply chain disruptions exposed a critical gap in enterprise analytics visibility. This project builds a complete analytics pipeline to identify delay patterns, score supplier performance, and predict at-risk orders before they ship.
 
-*delivery delay prediction, supplier performance analysis, and an* 
+## Architecture
 
-*interactive Power BI dashboard.*
+**Raw Data (Kaggle/Olist) → Azure Blob Storage → Python ETL → **
 
+**XGBoost Model → Processed Data → Azure Blob Storage → Power BI Dashboard**
 
-
-*## Project Overview*
-
-*Post-2020 supply chain disruptions exposed a critical gap in enterprise* 
-
-*analytics visibility. This project builds a complete analytics pipeline* 
-
-*to identify delay patterns, score supplier performance, and predict* 
-
-*at-risk orders before they ship.*
-
-
-
-*## Architecture*
-
-*Raw Data (Kaggle/Olist) → Azure Blob Storage → Python ETL →* 
-
-*XGBoost Model → Processed Data → Azure Blob Storage → Power BI Dashboard*
-
-
-
-*## Tech Stack*
+## Tech Stack
 
 *- \*\*Cloud:\*\* Azure Blob Storage*
 
@@ -42,19 +24,17 @@
 
 *- \*\*Dataset:\*\* Brazilian E-Commerce (Olist) — 96,470 orders, 9 tables*
 
+## Key Findings
 
+- Overall late delivery rate: 6.77%
 
-*## Key Findings*
+- Top delay predictor: purchase month (seasonality)
 
-*- Overall late delivery rate: 6.77%*
+- Highest risk region: Amazonas (AM) — 33% late rate
 
-*- Top delay predictor: purchase month (seasonality)*
+- Same-state orders are significantly less likely to be delayed
 
-*- Highest risk region: Amazonas (AM) — 33% late rate*
-
-*- Same-state orders are significantly less likely to be delayed*
-
-*- Orders placed in March have the highest late rate (\~15%)*
+- Orders placed in March have the highest late rate (\~15%)
 
 
 
