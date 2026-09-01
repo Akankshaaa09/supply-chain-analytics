@@ -51,10 +51,7 @@ Post-2020 supply chain disruptions exposed a critical gap in enterprise analytic
 *- \*\*Top features:\*\* purchase\_month, same\_state, carrier\_delay\_hours*
 
 
-
-*## Project Structure*
-
-
+## Project Structure
 
 *supply-chain-analytics/*
 
@@ -70,29 +67,21 @@ Post-2020 supply chain disruptions exposed a critical gap in enterprise analytic
 
 *└── raw\_data/           # Original Olist CSVs (gitignored)*
 
+## How to Run
 
+1. Clone the repo
 
-*## Dashboard Preview*
+2. Create virtual environment: `python -m venv venv`
 
-*!\[Supply Chain Dashboard](dashboard/supply\_chain\_dashboard\_ss.png)*
+3. Activate: `venv\\Scripts\\activate`
 
+4. Install dependencies: `pip install -r requirements.txt`
 
+5. Add your Azure connection string to `.env`
 
-*## How to Run*
+6. Run `scripts/upload\_to\_azure.py` to ingest data
 
-*1. Clone the repo*
-
-*2. Create virtual environment: `python -m venv venv`*
-
-*3. Activate: `venv\\Scripts\\activate`*
-
-*4. Install dependencies: `pip install -r requirements.txt`*
-
-*5. Add your Azure connection string to `.env`*
-
-*6. Run `scripts/upload\_to\_azure.py` to ingest data*
-
-*7. Open `notebooks/supply\_chain\_analysis.ipynb` and run all cells*
+7. Open `notebooks/supply\_chain\_analysis.ipynb` and run all cells
 
 
 
